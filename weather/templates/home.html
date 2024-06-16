@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="content_wrapper" id="app">
+    <div v-if="infos.city">
+        <h1>
+            Weather
+            <div class="date"></div>
+        </h1>
+        <form class="" method="get">
+            <input class="form-control" name="city">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
+        <div class="weather_card">
+            <div class="weather_card_img" :style="{backgroundImage: 'url(https://openweathermap.org/img/wn/' + data.icon + '.png)'}">
+                <div class="weather_card_state">
+                    <span class="material-icons">
+                    <img src="{% static 'img/wet.webp' %}" alt="weather state">
+                    </span>
+                </div>
+            </div>
+
+            <div class="weather_card_infos">
+                <div class="weather_card_infos_title">
+                    {{ data.city }} - {{ data.description }}
+                </div>
+                <div class="weather_card_infos_temp">
+                    {{ data.celsius_temperature }}°C / {{ data.fahrenheit_temperature }}°F
+                </div>
+                <div class="bottom">
+                    <hr>
+                    <div class="weather_card_infos_bottom">
+                        humidity: {{ data.humidity }}% - pressure: {{ data.pressure }} hPa
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
