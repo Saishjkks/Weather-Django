@@ -1,11 +1,1 @@
-Search Functionality: Users can search for the current weather in any city.
-Real-Time Data: The website fetches and displays up-to-date weather information.
-Weather Details: Displays temperature, weather conditions, humidity, wind speed, and more.
-Responsive Design: The website is fully responsive, ensuring it works well on both desktop and mobile devices.
-Error Handling: Graceful handling of errors such as invalid city names or network issues.
-Clean and Modern UI: A clean, modern, and intuitive user interface for a better user experience.
-Technologies Used
-Django: The main framework used for backend development.
-HTML/CSS: For structuring and styling the web pages.
-JavaScript: For enhancing user interactions and making asynchronous API calls.
-Bootstrap: To ensure the website is responsive and has a modern look
+
